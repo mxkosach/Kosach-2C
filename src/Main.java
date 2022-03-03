@@ -18,8 +18,8 @@ public class Main {
         Date dateNow = new Date();
         System.out.println("\n***********************");
         System.out.println("©Maksim Kosach, 2022");
-        System.out.println("Date of receipt of the task: " + dateOfReceipt);
-        System.out.println("Date of completion of the task: " + dateNow);
+        System.out.println("Date of receipt of the task:\t" + dateOfReceipt);
+        System.out.println("Date of completion of the task:\t" + dateNow);
     }
 
     public static void main(String[] args) {
@@ -32,8 +32,6 @@ public class Main {
 
         int matrix[][] = new int[dim][dim];
         Random random = new Random();
-        //List<List<Integer>> list= new ArrayList<>();
-
 
         for (int i = 0; i < dim; i++) {
             for (int j = 0; j < dim; j++) {
@@ -57,28 +55,18 @@ public class Main {
         }
         System.out.println("Maximum element of the matrix: " + max);
 
-        //////////////////////////////////////////////////////////////////////////////
-        int dimNew = dim;
-        ;
         for (int i = 0; i < dim; i++) {
             for (int j = 0; j < dim; j++) {
                 {
                     if (matrix[i][j] == max) {
-                        for (int k = 0; k < dim; k++) {
+                        for (int k = 0; k < dim; k++)
                             matrix[i][k] = -dim - 1;
-                        }
-                        for (int k = 0; k < dim; k++) {
+                        for (int k = 0; k < dim; k++)
                             matrix[k][j] = -dim - 1;
-                        }
-                        //matrix[i][j]=-dim-1;
-                        //dimNew--;
-                        //break;
                     }
                 }
             }
         }
-        //int [][]matrixNew=new int[dimNew][dimNew];
-
 
         System.out.println("New matrix:");
         boolean flag = false;
